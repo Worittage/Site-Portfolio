@@ -13,14 +13,10 @@ export class Projects extends Component {
     <ul className="projects">
 {/*Ниже используем массив из папки projectsList.js  */}
 
-       {/* {projects.map(() => {
-            return <Project />
-        })} */} 
+      {projects.map((project, index) => {
+            return <Project key={index} title={project.title} img={project.img}  />
+        })} 
         
-        {console.log(projects)}
-        
-        <Project />
-       
     </ul>
     </div>
 </main>
